@@ -4,46 +4,31 @@ import React from 'react';
 
 
 const Header = (props) => {
-  console.log("props are", props);
+
   return (
 
     <div>
 
       <h1> {props.title}</h1>
     </div>
-  )
+  );
 }
 
 
-class Header1 extends React.Component {
 
-  render() {
 
-    return (
+const Counter = (props) => {
 
-      <div>
+  return (
 
-        <h1> {this.props.title}</h1>
-      </div>
-    );
-  }
+    <div>
+
+      <h1>{props.counter}</h1>
+
+    </div>
+  );
 }
 
-class Counter extends React.Component {
-
-  render() {
-
-    return (
-
-
-      <div>
-
-        <h1>{this.props.counter}</h1>
-
-      </div>
-    );
-  }
-}
 
 
 class ButtonsContainer extends React.Component {
