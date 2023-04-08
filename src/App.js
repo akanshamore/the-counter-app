@@ -2,7 +2,20 @@
 import './App.css';
 import React from 'react';
 
-class Header extends React.Component {
+
+const Header = (props) => {
+  console.log("props are", props);
+  return (
+
+    <div>
+
+      <h1> {props.title}</h1>
+    </div>
+  )
+}
+
+
+class Header1 extends React.Component {
 
   render() {
 
