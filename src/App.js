@@ -3,13 +3,13 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 
 
-const Header = (props) => {
+const NavBar = () => {
 
   return (
 
-    <div>
+    <div className='navContainer'>
 
-      <h1> {props.title}</h1>
+      <h1> The Counter App</h1>
     </div>
   );
 }
@@ -21,7 +21,7 @@ const Counter = (props) => {
 
   return (
 
-    <div>
+    <div className='counterContainer'>
 
       <h1>{props.counter}</h1>
 
@@ -38,11 +38,11 @@ const ButtonsContainer = (props) => {
   return (
 
 
-    <div>
+    <div className='buttonContainer'>
 
-      <button onClick={props.handleAdd}>+</button>
-      <button onClick={props.handleSubtract}>-</button>
-      <button onClick={props.handleReset}>Reset</button>
+      <button onClick={props.handleAdd} className='buttonStyle'>+</button>
+      <button onClick={props.handleSubtract} className='buttonStyle'>-</button>
+      <button onClick={props.handleReset} className='buttonStyle'>Reset</button>
 
     </div>
   );
@@ -55,7 +55,6 @@ const App = () => {
 
 
   const [counter, setCounter] = useState(0)
-  const title = "The Counter App"
   const handleAdd = () => {
     setCounter(counter + 1)
   }
@@ -71,11 +70,14 @@ const App = () => {
   }
   return (
 
-    <div>
-      <Header title={title} />
+    <div className='appContainer'>
+      <NavBar />
       <Counter counter={counter} />
       <ButtonsContainer handleAdd={handleAdd} handleSubtract={handleSubtract} handleReset={handleReset} />
 
+      <footer className='footerContainer'>
+        © 2023 Akansha More
+      </footer>
     </div>
   )
 }

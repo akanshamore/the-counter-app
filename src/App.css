@@ -1,6 +1,97 @@
-.App {
-  text-align: center;
+.appContainer {
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #404349;
+
 }
+
+
+.navContainer {
+
+  display: flex;
+  flex-direction: column;
+  background-color: #1b1c1e;
+  color: white;
+  padding-left: 20px;
+
+}
+
+
+.counterContainer {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bolder;
+  color: gold;
+  margin-bottom: 20px;
+  font-size: 70px;
+
+}
+
+.buttonContainer {
+
+  display: flex;
+
+  padding: 40px;
+  justify-content: space-between;
+  width: 400px;
+  align-self: center;
+
+}
+
+
+.buttonStyle {
+
+  background-color: #1b1c1e;
+  padding: 20px;
+
+  color: white;
+  font-size: medium;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+
+
+}
+
+.footerContainer {
+
+  display: flex;
+  color: white;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .App-logo {
   height: 40vmin;
@@ -32,6 +123,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
