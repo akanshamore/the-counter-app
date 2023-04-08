@@ -1,6 +1,6 @@
 
 import './App.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 const Header = (props) => {
@@ -48,39 +48,36 @@ const ButtonsContainer = (props) => {
   );
 }
 
-class App extends React.Component {
 
-  state = { counter: 0 }
 
-  handleAdd = () => {
 
-    this.setState({ counter: this.state.counter + 1 })
+const App = () => {
 
+
+  const [counter, setCounter] = useState(0)
+  const title = "The Counter App"
+  const handleAdd = () => {
+    setCounter(counter + 1)
   }
 
-  handleSubtract = () => {
 
-    this.setState({ counter: this.state.counter - 1 })
+
+  const handleSubtract = () => {
+    setCounter(counter - 1)
   }
-  handleReset = () => {
+  const handleReset = () => {
 
-    this.setState({ counter: 0 })
+    setCounter(0)
   }
-  render() {
+  return (
 
-    const title = "The Counter App"
-    return (
-      <div>
+    <div>
+      <Header title={title} />
+      <Counter counter={counter} />
+      <ButtonsContainer handleAdd={handleAdd} handleSubtract={handleSubtract} handleReset={handleReset} />
 
-
-        <Header title={title} />
-        <Counter counter={this.state.counter} />
-        <ButtonsContainer
-          handleAdd={this.handleAdd} handleSubtract={this.handleSubtract} handleReset={this.handleReset} />
-
-      </div>
-
-    );
-  }
+    </div>
+  )
 }
+
 export default App;
