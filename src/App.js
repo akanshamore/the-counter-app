@@ -31,23 +31,23 @@ const Counter = (props) => {
 
 
 
-class ButtonsContainer extends React.Component {
-
-  render() {
-
-    return (
+const ButtonsContainer = (props) => {
 
 
-      <div>
 
-        <button onClick={this.props.handleAdd}>+</button>
-        <button onClick={this.props.handleSubtract}>-</button>
-        <button onClick={this.props.handleReset}>Reset</button>
+  return (
 
-      </div>
-    );
-  }
+
+    <div>
+
+      <button onClick={props.handleAdd}>+</button>
+      <button onClick={props.handleSubtract}>-</button>
+      <button onClick={props.handleReset}>Reset</button>
+
+    </div>
+  );
 }
+
 class App extends React.Component {
 
   state = { counter: 0 }
